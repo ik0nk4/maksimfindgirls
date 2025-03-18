@@ -15,8 +15,7 @@ func _on_new_game_button_down() -> void:
 
 func _on_new_game_button_up() -> void:
 	new_game_title.position.y -= 5
-	#GameManager.change_scene("res://scenes/locations/3d_maksik_home.tscn")
-	get_tree().change_scene_to_file("res://scenes/locations/3d_maksik_home.tscn")
+	GameManager.change_scene_with_fade("res://scenes/locations/3d_maksik_home.tscn")
 
 
 func _on_continue_button_down() -> void:

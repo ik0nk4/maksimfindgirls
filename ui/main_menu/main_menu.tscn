@@ -158,7 +158,6 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_i5wg5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_i5wg5")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_joh67")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u184e")
-script = ExtResource("1_uhj5c")
 
 [node name="settings_menu" type="PanelContainer" parent="."]
 visible = false
