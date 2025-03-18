@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bvpbo4v1y7a15"]
+
+[ext_resource type="Texture2D" uid="uid://cgg5bxc2urj1k" path="res://ui/sprites/main_menu_button.png" id="1_iphsr"]
+[ext_resource type="FontFile" uid="uid://bmfdtvagauahi" path="res://assets/fonts/PressStart2P-Regular.ttf" id="2_3kk6g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lwweg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lwweg"]
+texture = ExtResource("1_iphsr")
+region_rect = Rect2(0, 17, 32, 15)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qhdks"]
+texture = ExtResource("1_iphsr")
+region_rect = Rect2(0, 1, 32, 15)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_368br"]
+texture = ExtResource("1_iphsr")
+region_rect = Rect2(0, 34, 32, 14)
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxFlat_lwweg")
+Button/styles/hover = SubResource("StyleBoxTexture_lwweg")
+Button/styles/normal = SubResource("StyleBoxTexture_qhdks")
+Button/styles/pressed = SubResource("StyleBoxTexture_368br")
+Label/font_sizes/font_size = 25
+Label/fonts/font = ExtResource("2_3kk6g")

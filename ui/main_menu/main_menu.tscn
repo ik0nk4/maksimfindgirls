@@ -1,0 +1,215 @@
+[gd_scene load_steps=10 format=3 uid="uid://bkkv8eo86tc7c"]
+
+[ext_resource type="Script" uid="uid://dtfvi73rkta61" path="res://ui/main_menu/main_menu.gd" id="1_uhj5c"]
+[ext_resource type="Theme" uid="uid://bvpbo4v1y7a15" path="res://ui/themes/main_menu_ui.tres" id="2_mu8pm"]
+[ext_resource type="FontFile" uid="uid://bmfdtvagauahi" path="res://assets/fonts/PressStart2P-Regular.ttf" id="3_omy8q"]
+[ext_resource type="Texture2D" uid="uid://cgg5bxc2urj1k" path="res://ui/sprites/main_menu_button.png" id="4_i5wg5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5wg5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5wg5"]
+texture = ExtResource("4_i5wg5")
+region_rect = Rect2(33, 22, 20, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_joh67"]
+texture = ExtResource("4_i5wg5")
+region_rect = Rect2(33, 43, 20, 20)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u184e"]
+texture = ExtResource("4_i5wg5")
+region_rect = Rect2(33, 1, 20, 20)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3c04x"]
+bg_color = Color(0.611765, 0.537255, 0.721569, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="root" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uhj5c")
+
+[node name="logo" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.122
+anchor_right = 1.0
+anchor_bottom = 0.317
+offset_top = 0.23999
+offset_bottom = 0.410797
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 151
+text = "Максим ищет девушку"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="buttons_container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.114
+anchor_top = 0.802
+anchor_right = 0.114
+anchor_bottom = 0.802
+offset_left = -154.88
+offset_top = -154.16
+offset_right = 153.12
+offset_bottom = 154.84
+grow_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="new_game_button" type="Button" parent="buttons_container"]
+layout_mode = 2
+size_flags_vertical = 7
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("2_mu8pm")
+
+[node name="new_game_title" type="Label" parent="buttons_container/new_game_button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.428
+anchor_right = 0.5
+anchor_bottom = 0.428
+offset_left = -125.0
+offset_top = -12.52
+offset_right = 125.0
+offset_bottom = 12.48
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_omy8q")
+theme_override_font_sizes/font_size = 25
+text = "Новая игра"
+horizontal_alignment = 1
+
+[node name="continue_button" type="Button" parent="buttons_container"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("2_mu8pm")
+
+[node name="continue_title" type="Label" parent="buttons_container/continue_button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.428
+anchor_right = 0.5
+anchor_bottom = 0.428
+offset_left = -125.0
+offset_top = -12.52
+offset_right = 125.0
+offset_bottom = 12.48
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_omy8q")
+theme_override_font_sizes/font_size = 25
+text = "Продолжить"
+horizontal_alignment = 1
+
+[node name="exit_button" type="Button" parent="buttons_container"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+theme = ExtResource("2_mu8pm")
+
+[node name="exit_title" type="Label" parent="buttons_container/exit_button"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.428
+anchor_right = 0.5
+anchor_bottom = 0.428
+offset_left = -125.0
+offset_top = -12.52
+offset_right = 125.0
+offset_bottom = 12.48
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_omy8q")
+theme_override_font_sizes/font_size = 25
+text = "Выход"
+horizontal_alignment = 1
+
+[node name="settings_button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.942
+anchor_top = 0.915
+anchor_right = 0.942
+anchor_bottom = 0.915
+offset_left = -48.64
+offset_top = -36.2
+offset_right = 47.36
+offset_bottom = 35.8
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxFlat_i5wg5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_i5wg5")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_joh67")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u184e")
+script = ExtResource("1_uhj5c")
+
+[node name="settings_menu" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -280.0
+offset_top = -303.0
+offset_right = 416.0
+offset_bottom = 341.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3c04x")
+
+[node name="Label" type="Label" parent="settings_menu"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Соси хуй
+Без настроек"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="settings_menu"]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settings_menu/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="Button" type="Button" parent="settings_menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "asd"
+
+[node name="Button2" type="Button" parent="settings_menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "asd"
+
+[node name="Button3" type="Button" parent="settings_menu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "asd"
+
+[connection signal="button_down" from="buttons_container/new_game_button" to="." method="_on_new_game_button_down"]
+[connection signal="button_up" from="buttons_container/new_game_button" to="." method="_on_new_game_button_up"]
+[connection signal="button_down" from="buttons_container/continue_button" to="." method="_on_continue_button_down"]
+[connection signal="button_up" from="buttons_container/continue_button" to="." method="_on_continue_button_up"]
+[connection signal="button_down" from="buttons_container/exit_button" to="." method="_on_exit_button_down"]
+[connection signal="button_up" from="buttons_container/exit_button" to="." method="_on_exit_button_up"]
+[connection signal="pressed" from="settings_button" to="." method="_on_settings_button_pressed"]
